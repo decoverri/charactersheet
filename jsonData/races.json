@@ -1,0 +1,7 @@
+{"race":{"name":"Dwarf","size":"MEDIUM","baseSpeed":"20"}}
+{"race":{"name":"Elf","size":"MEDIUM","baseSpeed":"30"}}
+{"race":{"name":"Gnome","size":"SMALL","baseSpeed":"20"}}
+{"race":{"name":"Half-Elf","size":"MEDIUM","baseSpeed":"30"}}
+{"race":{"name":"Half-Orc","size":"MEDIUM","baseSpeed":"30"}}
+{"race":{"name":"Halfling","size":"SMALL","baseSpeed":"20"}}
+{"race":{"name":"Human","size":"MEDIUM","baseSpeed":"30"}}

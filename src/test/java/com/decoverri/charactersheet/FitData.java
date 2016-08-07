@@ -14,7 +14,9 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.decoverri.charactersheet.daos.BaseClassDao;
+import com.decoverri.charactersheet.daos.RaceDao;
 import com.decoverri.charactersheet.models.BaseClass;
+import com.decoverri.charactersheet.models.Race;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver;
 
@@ -31,6 +33,9 @@ public class FitData {
 	@Autowired
 	private BaseClassDao baseClassDao;
 
+	@Autowired
+	private RaceDao raceDao;
+
 	private String formatFileName(String fileName){
 		return DATA_FOLDER + fileName + DATA_EXTENSION;
 	}
@@ -41,15 +46,26 @@ public class FitData {
 
 	@Test
 	public void createBaseClasses() throws Exception {
-		
 		xstream.alias("baseClass", BaseClass.class);
 		
 		Scanner scanner = createScannerFor("baseClasses");
-		
 		while(scanner.hasNextLine()){
 			String nextClass = scanner.nextLine();
 			BaseClass baseClass = (BaseClass) xstream.fromXML(nextClass);
 			baseClassDao.saveOrUpdateByName(baseClass);
+		}
+				
+	}
+
+	@Test
+	public void createRaces() throws Exception {
+		xstream.alias("race", Race.class);
+		
+		Scanner scanner = createScannerFor("races");
+		while(scanner.hasNextLine()){
+			String nextRace = scanner.nextLine();
+			Race race = (Race) xstream.fromXML(nextRace);
+			raceDao.saveOrUpdateByName(race);
 		}
 				
 	}
