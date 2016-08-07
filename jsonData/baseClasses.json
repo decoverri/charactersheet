@@ -1,0 +1,4 @@
+{"baseClass":{"name":"Barbarian","hitDie":12,"skillRanksPerLevel":4,"babProgression":"GOOD","fortitudeProgression":"GOOD","reflexProgression":"BAD","willProgression":"BAD"}}
+{"baseClass":{"name":"Cleric","hitDie":8,"skillRanksPerLevel":2,"babProgression":"MEDIUM","fortitudeProgression":"GOOD","reflexProgression":"BAD","willProgression":"GOOD"}}
+{"baseClass":{"name":"Rogue","hitDie":8,"skillRanksPerLevel":8,"babProgression":"MEDIUM","fortitudeProgression":"BAD","reflexProgression":"GOOD","willProgression":"BAD"}}
+{"baseClass":{"name":"Wizard","hitDie":6,"skillRanksPerLevel":2,"babProgression":"BAD","fortitudeProgression":"BAD","reflexProgression":"BAD","willProgression":"GOOD"}}
