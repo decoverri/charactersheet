@@ -16,7 +16,7 @@ public class RaceDao {
 	private EntityManager manager;
 
 	public void saveOrUpdateByName(Race race) {
-		Race loaded = findByName(race);
+		Race loaded = findByName(race.getName());
 		if (loaded == null) {
 			manager.persist(race);
 		} else {
@@ -24,9 +24,9 @@ public class RaceDao {
 		}
 	}
 
-	private Race findByName(Race race) {
+	public Race findByName(String name) {
 		List<Race> result = manager.createQuery("select r from Race r where name = :name")
-				.setParameter("name", race.getName()).getResultList();
+				.setParameter("name", name).getResultList();
 		if(result.isEmpty()){
 			return null;
 		}

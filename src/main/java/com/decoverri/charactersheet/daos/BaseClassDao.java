@@ -16,7 +16,7 @@ public class BaseClassDao {
 	private EntityManager manager;
 
 	public void saveOrUpdateByName(BaseClass baseClass) {
-		BaseClass loaded = findByName(baseClass);
+		BaseClass loaded = findByName(baseClass.getName());
 		if (loaded == null) {
 			manager.persist(baseClass);
 		} else {
@@ -24,9 +24,9 @@ public class BaseClassDao {
 		}
 	}
 
-	private BaseClass findByName(BaseClass baseClass) {
+	public BaseClass findByName(String name) {
 		List<BaseClass> result = manager.createQuery("select bc from BaseClass bc where name = :name")
-				.setParameter("name", baseClass.getName()).getResultList();
+				.setParameter("name", name).getResultList();
 		if(result.isEmpty()){
 			return null;
 		}
