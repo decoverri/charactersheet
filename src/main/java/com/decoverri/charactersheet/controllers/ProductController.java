@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.decoverri.charactersheet.daos.CategoryDao;
-import com.decoverri.charactersheet.models.Category;
 import com.decoverri.charactersheet.daos.ProductDao;
 import com.decoverri.charactersheet.models.Product;
 
