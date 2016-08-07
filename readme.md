@@ -1,6 +1,3 @@
-#Some setup information :).
+#Charater Sheet manager for Pathfinder
 
-##Spring JPA Setup
-You need to change the **application.properties** and configure the login, password and url of your database. 
-  	
-
+Future to be web application for managing character sheet
