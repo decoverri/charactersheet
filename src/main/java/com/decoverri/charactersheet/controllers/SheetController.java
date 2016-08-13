@@ -1,5 +1,7 @@
 package com.decoverri.charactersheet.controllers;
 
+import static com.decoverri.charactersheet.enums.Alignment.LG;
+
 import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.decoverri.charactersheet.daos.BaseClassDao;
 import com.decoverri.charactersheet.daos.RaceDao;
+import com.decoverri.charactersheet.enums.Alignment;
 import com.decoverri.charactersheet.factories.CharacterSheetFactory;
 import com.decoverri.charactersheet.models.Character;
 import com.decoverri.charactersheet.models.CharacterSheet;
@@ -27,7 +30,7 @@ public class SheetController {
 	public String sheet(Model model) {
 		Character character = new Character();
 		character.setName("Sirion");
-		character.setAlignment("LG");
+		character.setAlignment(LG);
 		character.setPlayer("Deco");
 		
 		LevelsInClass levelsInClass = new LevelsInClass();

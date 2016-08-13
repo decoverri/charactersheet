@@ -1,5 +1,7 @@
 package com.decoverri.charactersheet.models;
 
+import static com.decoverri.charactersheet.enums.Alignment.LG;
+
 import java.util.Arrays;
 
 import org.junit.Test;
@@ -11,6 +13,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.decoverri.charactersheet.Boot;
 import com.decoverri.charactersheet.daos.BaseClassDao;
 import com.decoverri.charactersheet.daos.RaceDao;
+import com.decoverri.charactersheet.enums.Alignment;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes=Boot.class)
@@ -25,7 +28,7 @@ public class CharacterTest {
 	public void createACharacter() {
 		Character character = new Character();
 		character.setName("Sirion");
-		character.setAlignment("LG");
+		character.setAlignment(LG);
 		character.setPlayer("Deco");
 		
 		LevelsInClass levelsInClass = new LevelsInClass();

@@ -16,7 +16,7 @@ public class CharacterSheet {
 	}
 
 	public String getAlignment(){
-		return this.character.getAlignment();
+		return this.character.getAlignment().toString();
 	}
 	
 	public String getPlayer(){

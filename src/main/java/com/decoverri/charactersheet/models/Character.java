@@ -2,20 +2,25 @@ package com.decoverri.charactersheet.models;
 
 import java.util.List;
 
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+
+import com.decoverri.charactersheet.enums.Alignment;
+
 public class Character {
 
 	private String name;
-	private String alignment;
+	private Alignment alignment;
 	private String player;
 	private List<LevelsInClass> classes;
 	private Race race;
 	
-	private Integer strength;
-	private Integer dexterity;
-	private Integer constitution;
-	private Integer intelligence;
-	private Integer wisdom;
-	private Integer charisma;
+	private Ability strength;
+	private Ability dexterity;
+	private Ability constitution;
+	private Ability intelligence;
+	private Ability wisdom;
+	private Ability charisma;
 	
 	private Integer totalHP;
 
@@ -27,11 +32,11 @@ public class Character {
 		this.name = name;
 	}
 
-	public String getAlignment() {
+	public Alignment getAlignment() {
 		return alignment;
 	}
 
-	public void setAlignment(String alignment) {
+	public void setAlignment(Alignment alignment) {
 		this.alignment = alignment;
 	}
 
@@ -59,52 +64,52 @@ public class Character {
 		this.race = race;
 	}
 
-	public Integer getStrength() {
+	public Ability getStrength() {
 		return strength;
 	}
 
 	public void setStrength(Integer strength) {
-		this.strength = strength;
+		this.strength = new Ability(strength, "strength");
 	}
 
-	public Integer getDexterity() {
+	public Ability getDexterity() {
 		return dexterity;
 	}
 
 	public void setDexterity(Integer dexterity) {
-		this.dexterity = dexterity;
+		this.dexterity = new Ability(dexterity, "dexterity");
 	}
 
-	public Integer getConstitution() {
+	public Ability getConstitution() {
 		return constitution;
 	}
 
 	public void setConstitution(Integer constitution) {
-		this.constitution = constitution;
+		this.constitution = new Ability(constitution, "constitution");
 	}
 
-	public Integer getIntelligence() {
+	public Ability getIntelligence() {
 		return intelligence;
 	}
 
 	public void setIntelligence(Integer intelligence) {
-		this.intelligence = intelligence;
+		this.intelligence = new Ability(intelligence, "intelligence");
 	}
 
-	public Integer getWisdom() {
+	public Ability getWisdom() {
 		return wisdom;
 	}
 
 	public void setWisdom(Integer wisdom) {
-		this.wisdom = wisdom;
+		this.wisdom = new Ability(wisdom, "wisdom");
 	}
 
-	public Integer getCharisma() {
+	public Ability getCharisma() {
 		return charisma;
 	}
 
 	public void setCharisma(Integer charisma) {
-		this.charisma = charisma;
+		this.charisma = new Ability(charisma, "charisma");
 	}
 
 	public Integer getTotalHP() {
