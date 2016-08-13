@@ -25,8 +25,20 @@ public enum Size {
 		return stealthBonus;
 	}
 
-	public Integer getBonus() {
+	public Integer getAttackBonus() {
 		return bonus;
+	}
+	
+	public Integer getACBonus() {
+		return bonus;
+	}
+	
+	public Integer getCMBBonus() {
+		return -bonus;
+	}
+	
+	public Integer getCMDBonus() {
+		return -bonus;
 	}
 	
 	public String getName() {

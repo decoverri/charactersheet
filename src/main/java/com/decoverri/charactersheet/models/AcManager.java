@@ -13,15 +13,15 @@ public class AcManager {
 	}
 
 	public Integer getAc() {
-		return 10 + dexterity.getModifier() + size.getBonus();
+		return 10 + dexterity.getModifier() + size.getACBonus();
 	}
 
 	public Integer getTouch(){
-		return 10 + dexterity.getModifier() + size.getBonus();
+		return 10 + dexterity.getModifier() + size.getACBonus();
 	}
 
 	public Integer getFlatFooted(){
-		return 10 + size.getBonus();
+		return 10 + size.getACBonus();
 	}
 
 }

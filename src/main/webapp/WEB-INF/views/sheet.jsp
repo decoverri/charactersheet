@@ -92,6 +92,12 @@
 <section>
 	<div>Base Atack Bonus</div>
 	<div>${sheet.baseAtackBonus}</div>
+	
+	<div>Melee Bonus</div>
+	<div>${sheet.meleeBonus}</div>
+	
+	<div>Ranged Bonus</div>
+	<div>${sheet.rangedBonus}</div>
 </section>
 </body>
 </html>

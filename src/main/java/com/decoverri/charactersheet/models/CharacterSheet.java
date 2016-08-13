@@ -65,6 +65,14 @@ public class CharacterSheet {
 	public Integer getBaseAtackBonus(){
 		return character.getBab();
 	}
+	
+	public Integer getMeleeBonus(){
+		return character.getBab() + strength.getModifier() + character.getRace().getSize().getAttackBonus();
+	}
+	
+	public Integer getRangedBonus(){
+		return character.getBab() + dexterity.getModifier() + character.getRace().getSize().getAttackBonus();
+	}
 
 	public HPManager getHpManager() {
 		return this.character.getHpManager();
