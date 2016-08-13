@@ -26,6 +26,7 @@ public class CharacterSheet {
 		intelligence = new Ability(character.getIntelligence(), "Intelligence");
 		wisdom = new Ability(character.getWisdom(), "Wisdom");            
 		charisma = new Ability(character.getCharisma(), "Charisma");
+		
 		acManager = new AcManager(dexterity, character.getRace().getSize());
 	}
 	
@@ -59,6 +60,10 @@ public class CharacterSheet {
 	
 	public AcManager getAcManager(){
 		return acManager;
+	}
+	
+	public Integer getBaseAtackBonus(){
+		return character.getBab();
 	}
 
 	public HPManager getHpManager() {

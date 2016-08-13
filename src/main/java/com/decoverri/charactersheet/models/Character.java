@@ -121,4 +121,12 @@ public class Character {
 	public String toString() {
 		return player + "'s character: " + name + ", a " + race + " " + classes.get(0);
 	}
+
+	public Integer getBab() {
+		int bab = 0;
+		for (LevelsInClass classi : getClasses()) {
+			bab = classi.getBaseClass().getBabProgression().getBab(classi.getLevel());
+		}
+		return bab;
+	}
 }

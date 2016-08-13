@@ -88,5 +88,10 @@
 	<div>AC - Flat-Footed</div>
 	<div>${sheet.acManager.flatFooted}</div>
 </section>
+
+<section>
+	<div>Base Atack Bonus</div>
+	<div>${sheet.baseAtackBonus}</div>
+</section>
 </body>
 </html>
