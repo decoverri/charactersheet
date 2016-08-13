@@ -65,5 +65,17 @@
 
 </table>
 
+<section>
+	<div>Total HP</div>
+	<div>${sheet.hpManager.total}</div>
+	
+	<div>Current HP</div>
+	<div>${sheet.hpManager.current}</div>
+
+	<div>Nonlethal Damage</div>
+	<div>${sheet.hpManager.nonlethalDamage}</div>
+	
+</section>
+
 </body>
 </html>

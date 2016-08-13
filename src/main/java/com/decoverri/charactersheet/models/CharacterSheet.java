@@ -36,11 +36,15 @@ public class CharacterSheet {
 	}
 	
 	public List<Ability> getAbilities(){
-		return Arrays.asList(character.getStrength(),
-							 character.getDexterity(),
-							 character.getConstitution(),
-							 character.getIntelligence(),
-							 character.getWisdom(),
-							 character.getCharisma());
+		return Arrays.asList(new Ability(character.getStrength(), "Strength"),
+							new Ability(character.getDexterity(), "Dexterity"),
+							new Ability(character.getConstitution(), "Constitution"),
+							new Ability(character.getIntelligence(), "Intelligence"),
+							new Ability(character.getWisdom(), "Wisdom"),
+							new Ability(character.getCharisma(), "Charisma"));
+	}
+	
+	public HPManager getHpManager() {
+		return new HPManager(character.getTotalHP());
 	}
 }
