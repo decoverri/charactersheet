@@ -77,4 +77,8 @@ public class CharacterSheet {
 	public HPManager getHpManager() {
 		return this.character.getHpManager();
 	}
+	
+	public Integer getInitiative(){
+		return this.dexterity.getModifier();
+	}
 }

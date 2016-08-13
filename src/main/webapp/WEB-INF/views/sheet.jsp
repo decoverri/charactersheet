@@ -101,5 +101,10 @@
 	<div>Ranged Bonus</div>
 	<div>${sheet.rangedBonus}</div>
 </section>
+<section>
+	<div>Initiative</div>
+	<div>${sheet.initiative }</div>
+</section>
+
 </body>
 </html>
