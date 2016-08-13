@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.decoverri.charactersheet.daos.BaseClassDao;
 import com.decoverri.charactersheet.daos.RaceDao;
-import com.decoverri.charactersheet.enums.Alignment;
 import com.decoverri.charactersheet.factories.CharacterSheetFactory;
 import com.decoverri.charactersheet.models.Character;
 import com.decoverri.charactersheet.models.CharacterSheet;
+import com.decoverri.charactersheet.models.HPManager;
 import com.decoverri.charactersheet.models.LevelsInClass;
 
 @Controller
@@ -47,7 +47,7 @@ public class SheetController {
 		character.setWisdom(10);
 		character.setCharisma(23);
 		
-		character.setTotalHP(88);
+		character.setHpManager(new HPManager(88, 88, 0));
 		CharacterSheet sheet = new CharacterSheetFactory().createSheetFor(character);
 		model.addAttribute("sheet",sheet);
 		return "sheet";

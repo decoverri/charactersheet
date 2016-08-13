@@ -13,7 +13,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.decoverri.charactersheet.Boot;
 import com.decoverri.charactersheet.daos.BaseClassDao;
 import com.decoverri.charactersheet.daos.RaceDao;
-import com.decoverri.charactersheet.enums.Alignment;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes=Boot.class)
@@ -45,7 +44,7 @@ public class CharacterTest {
 		character.setWisdom(10);
 		character.setCharisma(23);
 		
-		character.setTotalHP(88);
+		character.setHpManager(new HPManager(88, 88, 0));
 		
 		System.out.println(character);
 	}

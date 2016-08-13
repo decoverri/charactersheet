@@ -7,11 +7,15 @@ public class HPManager {
 	private Integer nonlethalDamage;
 
 	public HPManager(Integer total) {
-		this.total = total;
-		this.current = total;
-		this.nonlethalDamage = 0;
+		this(total, total, 0);
 	}
-	
+
+	public HPManager(Integer total, Integer current, Integer nonlethalDamage) {
+		this.total = total;
+		this.current = current;
+		this.nonlethalDamage = nonlethalDamage;
+	}
+
 	public Integer getTotal() {
 		return total;
 	}

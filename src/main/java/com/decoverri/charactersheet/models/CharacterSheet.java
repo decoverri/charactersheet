@@ -55,6 +55,6 @@ public class CharacterSheet {
 	}
 	
 	public HPManager getHpManager() {
-		return new HPManager(character.getTotalHP());
+		return this.character.getHpManager();
 	}
 }

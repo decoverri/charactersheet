@@ -19,7 +19,7 @@ public class Character {
 	private Integer wisdom;
 	private Integer charisma;
 	
-	private Integer totalHP;
+	private HPManager hpManager;
 
 	public String getName() {
 		return name;
@@ -109,12 +109,12 @@ public class Character {
 		this.charisma = charisma;
 	}
 
-	public Integer getTotalHP() {
-		return totalHP;
+	public HPManager getHpManager() {
+		return hpManager;
 	}
 
-	public void setTotalHP(Integer totalHP) {
-		this.totalHP = totalHP;
+	public void setHpManager(HPManager hpManager) {
+		this.hpManager = hpManager;
 	}
 
 	@Override
