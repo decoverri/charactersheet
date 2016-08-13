@@ -48,5 +48,22 @@
 	
 </section>
 
+<table class="abilities">
+	<tr>
+		<th>Ability Name</th>
+		<th>Score</th>
+		<th>Modifier</th>
+	</tr>
+	
+	<c:forEach items="${sheet.abilities}" var="ability" >
+		<tr>
+			<td>${ability.shortName}</td>
+			<td>${ability.value}</td>
+			<td>${ability.formattedModifier}</td>
+		</tr>
+	</c:forEach>
+
+</table>
+
 </body>
 </html>

@@ -1,11 +1,12 @@
 package com.decoverri.charactersheet.models;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class CharacterSheet {
 
 	private Character character;
-
+	
 	public void setCharacter(Character character) {
 		this.character = character;
 	}
@@ -32,5 +33,14 @@ public class CharacterSheet {
 	
 	public String getSize() {
 		return this.character.getRace().getSize().getName();
+	}
+	
+	public List<Ability> getAbilities(){
+		return Arrays.asList(character.getStrength(),
+							 character.getDexterity(),
+							 character.getConstitution(),
+							 character.getIntelligence(),
+							 character.getWisdom(),
+							 character.getCharisma());
 	}
 }
