@@ -6,6 +6,8 @@
 <head>
 <meta name="viewport" content="width=device-width">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="assets/css/sheet.css">
+
 <title>Character Sheet</title>
 </head>
 <body>
@@ -14,52 +16,52 @@
 
 <section class="personal">
 
-	<div class="name">
-		<div>Character Name</div>
+	<div class="name personal-item">
 		<div>${sheet.name}</div>
+		<div class="label">Character Name</div>
 	</div>
 
-	<div class="alignment">
-		<div>Alignment</div>
+	<div class="alignment personal-item">
 		<div>${sheet.alignment}</div>
+		<div class="label">Alignment</div>
 	</div>
 
-	<div class="player">
-		<div>Player</div>
+	<div class="player personal-item">
 		<div>${sheet.player}</div>
+		<div class="label">Player</div>
 	</div>
 
-	<div class="classes">
-		<div>Classes</div>
+	<div class="classes personal-item">
 		<c:forEach items="${sheet.classes}" var="baseClass" >
 			<div>${baseClass}</div>			
 		</c:forEach>
+		<div class="label">Classes</div>
 	</div>
 
-	<div>
-		<div>Race</div>
+	<div class="race personal-item">
 		<div>${sheet.raceName}</div>
+		<div class="label">Race</div>
 	</div>
 
-	<div>
-		<div>Size</div>
+	<div class="size personal-item">
 		<div>${sheet.size}</div>
+		<div class="label">Size</div>
 	</div>
 	
 </section>
 
 <table class="abilities">
 	<tr>
-		<th>Ability Name</th>
-		<th>Score</th>
-		<th>Modifier</th>
+		<th class="ability ability-title">Ability Name</th>
+		<th class="ability ability-title">Score</th>
+		<th class="ability ability-title">Modifier</th>
 	</tr>
 	
 	<c:forEach items="${sheet.abilities}" var="ability" >
 		<tr>
-			<td>${ability.shortName}</td>
-			<td>${ability.value}</td>
-			<td>${ability.formattedModifier}</td>
+			<td class="ability ability-name">${ability.shortName}</td>
+			<td class="ability ability-value">${ability.value}</td>
+			<td class="ability ability-modifier">${ability.formattedModifier}</td>
 		</tr>
 	</c:forEach>
 

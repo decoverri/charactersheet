@@ -1,0 +1,30 @@
+.ability-name{
+	color:white;
+	background-color:black;
+}
+
+.abilities{
+	border-collapse: separate;
+	overflow: hidden;
+    width: 10px;
+    text-align: center;
+}
+.ability{
+	    font-weight:normal;
+}
+.ability-value, .ability-modifier{
+	border: 1px solid black;
+	border-spacing: 50px 0;
+}
+
+.personal .label{
+	border-top: 1px solid black;
+	width: 150px;
+	font-size: 10px;
+}
+.personal .name, .personal .alignment{
+	width: 150px;
+}
+.personal-item{
+	display: inline-block;
+}
