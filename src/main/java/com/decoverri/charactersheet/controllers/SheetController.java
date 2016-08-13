@@ -1,28 +1,30 @@
-package com.decoverri.charactersheet.models;
+package com.decoverri.charactersheet.controllers;
 
 import java.util.Arrays;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.decoverri.charactersheet.Boot;
 import com.decoverri.charactersheet.daos.BaseClassDao;
 import com.decoverri.charactersheet.daos.RaceDao;
+import com.decoverri.charactersheet.factories.CharacterSheetFactory;
+import com.decoverri.charactersheet.models.Character;
+import com.decoverri.charactersheet.models.CharacterSheet;
+import com.decoverri.charactersheet.models.LevelsInClass;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes=Boot.class)
-public class CharacterTest {
-
+@Controller
+public class SheetController {
+	
 	@Autowired
 	private BaseClassDao baseClassDao;
+	
 	@Autowired
 	private RaceDao raceDao;
 
-	@Test
-	public void createACharacter() {
+	@RequestMapping("/")
+	public String sheet(Model model) {
 		Character character = new Character();
 		character.setName("Sirion");
 		character.setAlignment("LG");
@@ -43,8 +45,8 @@ public class CharacterTest {
 		character.setCharisma(23);
 		
 		character.setTotalHP(88);
-		
-		System.out.println(character);
+		CharacterSheet sheet = new CharacterSheetFactory().createSheetFor(character);
+		model.addAttribute("sheet",sheet);
+		return "sheet";
 	}
-
 }

@@ -58,5 +58,10 @@ public class Race {
 	public void setBaseSpeed(Integer baseSpeed) {
 		this.baseSpeed = baseSpeed;
 	}
+	
+	@Override
+	public String toString() {
+		return this.name;
+	}
 
 }
