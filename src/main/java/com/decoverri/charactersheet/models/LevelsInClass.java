@@ -23,6 +23,6 @@ public class LevelsInClass {
 
 	@Override
 	public String toString() {
-		return baseClass.getName() + " level " + level;
+		return baseClass.getName() + " " + level;
 	}
 }
