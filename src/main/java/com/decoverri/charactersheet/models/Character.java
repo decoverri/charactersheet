@@ -2,9 +2,6 @@ package com.decoverri.charactersheet.models;
 
 import java.util.List;
 
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-
 import com.decoverri.charactersheet.enums.Alignment;
 
 public class Character {
@@ -15,12 +12,12 @@ public class Character {
 	private List<LevelsInClass> classes;
 	private Race race;
 	
-	private Ability strength;
-	private Ability dexterity;
-	private Ability constitution;
-	private Ability intelligence;
-	private Ability wisdom;
-	private Ability charisma;
+	private Integer strength;
+	private Integer dexterity;
+	private Integer constitution;
+	private Integer intelligence;
+	private Integer wisdom;
+	private Integer charisma;
 	
 	private Integer totalHP;
 
@@ -64,52 +61,52 @@ public class Character {
 		this.race = race;
 	}
 
-	public Ability getStrength() {
+	public Integer getStrength() {
 		return strength;
 	}
 
 	public void setStrength(Integer strength) {
-		this.strength = new Ability(strength, "strength");
+		this.strength = strength;
 	}
 
-	public Ability getDexterity() {
+	public Integer getDexterity() {
 		return dexterity;
 	}
 
 	public void setDexterity(Integer dexterity) {
-		this.dexterity = new Ability(dexterity, "dexterity");
+		this.dexterity = dexterity;
 	}
 
-	public Ability getConstitution() {
+	public Integer getConstitution() {
 		return constitution;
 	}
 
 	public void setConstitution(Integer constitution) {
-		this.constitution = new Ability(constitution, "constitution");
+		this.constitution = constitution;
 	}
 
-	public Ability getIntelligence() {
+	public Integer getIntelligence() {
 		return intelligence;
 	}
 
 	public void setIntelligence(Integer intelligence) {
-		this.intelligence = new Ability(intelligence, "intelligence");
+		this.intelligence = intelligence;
 	}
 
-	public Ability getWisdom() {
+	public Integer getWisdom() {
 		return wisdom;
 	}
 
 	public void setWisdom(Integer wisdom) {
-		this.wisdom = new Ability(wisdom, "wisdom");
+		this.wisdom = wisdom;
 	}
 
-	public Ability getCharisma() {
+	public Integer getCharisma() {
 		return charisma;
 	}
 
 	public void setCharisma(Integer charisma) {
-		this.charisma = new Ability(charisma, "charisma");
+		this.charisma = charisma;
 	}
 
 	public Integer getTotalHP() {
