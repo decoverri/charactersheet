@@ -15,6 +15,8 @@ public class CharacterSheet {
 	private Ability wisdom;
 	private Ability charisma;
 	private Ability intelligence;
+
+	private AcManager acManager;
 	
 	public void setCharacter(Character character) {
 		this.character = character;
@@ -24,6 +26,7 @@ public class CharacterSheet {
 		intelligence = new Ability(character.getIntelligence(), "Intelligence");
 		wisdom = new Ability(character.getWisdom(), "Wisdom");            
 		charisma = new Ability(character.getCharisma(), "Charisma");
+		acManager = new AcManager(dexterity, character.getRace().getSize());
 	}
 	
 	public String getName(){
@@ -54,6 +57,10 @@ public class CharacterSheet {
 		return Arrays.asList(strength, dexterity, constitution, intelligence, wisdom, charisma);			 
 	}
 	
+	public AcManager getAcManager(){
+		return acManager;
+	}
+
 	public HPManager getHpManager() {
 		return this.character.getHpManager();
 	}

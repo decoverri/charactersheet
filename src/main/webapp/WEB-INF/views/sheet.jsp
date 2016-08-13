@@ -68,14 +68,25 @@
 <section>
 	<div>Total HP</div>
 	<div>${sheet.hpManager.total}</div>
-	
+
 	<div>Current HP</div>
 	<div>${sheet.hpManager.current}</div>
 
 	<div>Nonlethal Damage</div>
 	<div>${sheet.hpManager.nonlethalDamage}</div>
-	
 </section>
 
+<section>
+	<div>AC</div>
+	<div>${sheet.acManager.ac}</div>
+</section>
+<section>
+	<div>AC - Touch</div>
+	<div>${sheet.acManager.touch}</div>
+</section>
+<section>
+	<div>AC - Flat-Footed</div>
+	<div>${sheet.acManager.flatFooted}</div>
+</section>
 </body>
 </html>
