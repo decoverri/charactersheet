@@ -52,22 +52,27 @@
 	
 </section>
 
-<table class="abilities">
-	<tr>
-		<th class="ability ability-title">Ability Name</th>
-		<th class="ability ability-title">Score</th>
-		<th class="ability ability-title">Modifier</th>
-	</tr>
-	
-	<c:forEach items="${sheet.abilities}" var="ability" >
+<section class="abilities">
+	<table>
 		<tr>
-			<td class="ability ability-name">${ability.shortName}</td>
-			<td class="ability ability-value">${ability.value}</td>
-			<td class="ability ability-modifier">${ability.formattedModifier}</td>
+			<th class="abilities-title">Ability Name</th>
+			<th class="abilities-title">Ability Score</th>
+			<th class="abilities-title">Ability Modifier</th>
 		</tr>
-	</c:forEach>
-
-</table>
+		
+		<c:forEach items="${sheet.abilities}" var="ability" >
+			<tr class="ability">
+				<td class="ability-name strong">
+					<span class="ability-name-short">${ability.shortName}</span>
+					<label class="ability-name-long">${ability.name}</label>
+				</td>
+				<td class="ability-value">${ability.value}</td>
+				<td class="ability-modifier">${ability.formattedModifier}</td>
+			</tr>
+		</c:forEach>
+	
+	</table>
+</section>
 
 <section>
 	<div>Total HP</div>
