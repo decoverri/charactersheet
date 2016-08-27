@@ -1,30 +1,63 @@
-.ability-name{
+body {
+	margin: 1em;
+}
+
+.personal{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.personal-item-smallWrapper {	
+	display: flex;
+	flex-grow: 1;
+	flex-basis: 12em;
+}
+
+.personal-item-smallWrapper .personal-item {
+	flex-basis: 0;
+	flex-grow: 1;
+}
+
+.personal-item {
+	display: inline-block;
+	flex-grow: 1;
+	flex-basis: 4em;
+	margin: .2em;
+}
+
+.personal-item.name, .personal-item.player {
+	flex-grow: 1;
+	flex-basis: 9em;
+}
+
+.personal-item.classes {
+	flex-grow: 1;
+	flex-basis: 20em;
+}
+
+.personal-item-label {
+	border-top: 1px solid black;
+	font-size: .7em;
+	width: 100%;
+	display: inline-block;
+}
+
+.abilities {
+	border-collapse: separate;
+    width: .7em;
+    text-align: center;
+}
+
+.ability {
+	    font-weight:normal;
+}
+
+.ability-name {
 	color:white;
 	background-color:black;
 }
 
-.abilities{
-	border-collapse: separate;
-	overflow: hidden;
-    width: 10px;
-    text-align: center;
-}
-.ability{
-	    font-weight:normal;
-}
-.ability-value, .ability-modifier{
+.ability-value, .ability-modifier {
 	border: 1px solid black;
 	border-spacing: 50px 0;
-}
-
-.personal .label{
-	border-top: 1px solid black;
-	width: 150px;
-	font-size: 10px;
-}
-.personal .name, .personal .alignment{
-	width: 150px;
-}
-.personal-item{
-	display: inline-block;
 }

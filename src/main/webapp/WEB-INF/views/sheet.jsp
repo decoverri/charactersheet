@@ -18,34 +18,36 @@
 
 	<div class="name personal-item">
 		<div>${sheet.name}</div>
-		<div class="label">Character Name</div>
-	</div>
-
-	<div class="alignment personal-item">
-		<div>${sheet.alignment}</div>
-		<div class="label">Alignment</div>
+		<label class="personal-item-label">Character Name</label>
 	</div>
 
 	<div class="player personal-item">
 		<div>${sheet.player}</div>
-		<div class="label">Player</div>
+		<label class="personal-item-label">Player</label>
 	</div>
 
 	<div class="classes personal-item">
 		<c:forEach items="${sheet.classes}" var="baseClass" >
-			<div>${baseClass}</div>			
+			<div>${baseClass}</div>
 		</c:forEach>
-		<div class="label">Classes</div>
+		<label class="personal-item-label">Classes</label>
 	</div>
 
-	<div class="race personal-item">
-		<div>${sheet.raceName}</div>
-		<div class="label">Race</div>
-	</div>
-
-	<div class="size personal-item">
-		<div>${sheet.size}</div>
-		<div class="label">Size</div>
+	<div class="personal-item-smallWrapper">
+		<div class="alignment personal-item">
+			<div>${sheet.alignment}</div>
+			<label class="personal-item-label">Alignment</label>
+		</div>
+	
+		<div class="race personal-item">
+			<div>${sheet.raceName}</div>
+			<label class="personal-item-label">Race</label>
+		</div>
+	
+		<div class="size personal-item">
+			<div>${sheet.size}</div>
+			<label class="personal-item-label">Size</label>
+		</div>
 	</div>
 	
 </section>
