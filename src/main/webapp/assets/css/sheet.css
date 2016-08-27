@@ -7,32 +7,35 @@ body {
 	flex-wrap: wrap;
 }
 
-.personal-item-smallWrapper {	
+.personal-item-smallWrapper {
+	display: inline-block;
 	display: flex;
-	flex-grow: 1;
+	width: 12em;
 	flex-basis: 12em;
+	flex-grow: 1;
 }
 
 .personal-item-smallWrapper .personal-item {
+	width: 28%;
 	flex-basis: 0;
 	flex-grow: 1;
 }
 
 .personal-item {
 	display: inline-block;
-	flex-grow: 1;
-	flex-basis: 4em;
 	margin: .2em;
 }
 
 .personal-item.name, .personal-item.player {
-	flex-grow: 1;
+	width: 9em;
 	flex-basis: 9em;
+	flex-grow: 1;
 }
 
 .personal-item.classes {
-	flex-grow: 1;
+	width: 20em;
 	flex-basis: 20em;
+	flex-grow: 1;
 }
 
 .personal-item-label {
@@ -49,7 +52,7 @@ body {
 }
 
 .ability {
-	    font-weight:normal;
+	font-weight:normal;
 }
 
 .ability-name {
