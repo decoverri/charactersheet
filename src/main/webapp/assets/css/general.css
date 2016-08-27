@@ -2,7 +2,75 @@ body {
 	margin: 1em;
 }
 
-.strong {
+.black {
 	color:white;
 	background-color:black;
+}
+
+.subbedbox {
+	padding: .2em .3em;
+	text-align: center;
+	display: inl
+}
+
+.subbedbox-content {
+	display: block;
+	font-size: .9em;	
+}
+
+.subbedbox-subtitle {
+	display: block;
+	font-size: .5em;	
+}
+
+.borderedbox {
+	border: 1px solid black;
+	padding: .2em;
+}
+
+.borderedbox-title {
+	font-size: .7em;
+	margin-bottom: .2em;
+}
+
+.borderedbox-content {
+	text-align: right;
+}
+
+.sum {
+	text-align: center;
+	width: 3em;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.sum-total, .sum-part {
+	padding-right: 1em;
+	position: relative;
+}
+
+.sum-total:after {
+	content: "=";
+	position: absolute;
+	right: .1em;
+	top: .35em;
+}
+
+.sum-part:after {
+	content: "+";
+	position: absolute;
+	right: .1em;
+	top: .35em;
+}
+
+.sum-subtitle {
+	font-size: .7em;
+}
+
+.sum-constant {
+	width: 2em;	
+}
+
+.sum-constant-content {
+	font-size: 1.4em;
 }

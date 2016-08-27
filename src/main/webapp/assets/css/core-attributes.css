@@ -1,0 +1,27 @@
+.abilities {
+	margin: .3em;
+    width: 12em;
+    text-align: center;
+}
+
+.abilities-title {
+	font-size: .6em;
+}
+
+.hp {
+	width: 7em;
+}
+
+.hp, .initiative, .ac, .touchAC, .flatfootedAC {
+	margin: .45em;
+}
+
+.initiative-title, .initiative-bonus, 
+.ac-title, .ac-bonus {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.initiative-bonus, .ac-bonus {
+	padding: .2em;
+}

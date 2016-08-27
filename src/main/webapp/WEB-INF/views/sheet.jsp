@@ -4,11 +4,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="assets/css/sheet.css">
+	<meta name="viewport" content="width=device-width">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<title>Character Sheet</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/general.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/personal.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/core-attributes.css">
+	
+	<title>Character Sheet</title>
 </head>
 <body>
 
@@ -53,6 +56,7 @@
 </section>
 
 <section class="abilities">
+
 	<table>
 		<tr>
 			<th class="abilities-title">Ability Name</th>
@@ -62,40 +66,148 @@
 		
 		<c:forEach items="${sheet.abilities}" var="ability" >
 			<tr class="ability">
-				<td class="ability-name strong">
-					<span class="ability-name-short">${ability.shortName}</span>
-					<label class="ability-name-long">${ability.name}</label>
+				<td class="ability-name subbedbox black">
+					<span class="subbedbox-content">${ability.shortName}</span>
+					<label class="subbedbox-subtitle">${ability.name}</label>
 				</td>
-				<td class="ability-value">${ability.value}</td>
-				<td class="ability-modifier">${ability.formattedModifier}</td>
+				<td class="borderedbox">${ability.value}</td>
+				<td class="borderedbox">${ability.formattedModifier}</td>
 			</tr>
 		</c:forEach>
 	
 	</table>
+
 </section>
 
-<section>
-	<div>Total HP</div>
-	<div>${sheet.hpManager.total}</div>
+<section class="hp">
 
-	<div>Current HP</div>
-	<div>${sheet.hpManager.current}</div>
+	<div class="subbedbox black">
+		<span class="subbedbox-content">HP</span>
+		<label class="subbedbox-subtitle">Hit Points</label>
+	</div>
 
-	<div>Nonlethal Damage</div>
-	<div>${sheet.hpManager.nonlethalDamage}</div>
+	<div class="borderedbox">
+		<div class="borderedbox-title">Total</div>
+		<div class="borderedbox-content">${sheet.hpManager.total}</div>
+	</div>
+
+	<div class="borderedbox">
+		<div class="borderedbox-title">Current HP</div>
+		<div class="borderedbox-content">${sheet.hpManager.current}</div>
+	</div>
+
+	<div class="borderedbox">
+		<div class="borderedbox-title">Nonlethal Damage</div>
+		<div class="borderedbox-content">${sheet.hpManager.nonlethalDamage}</div>
+	</div>
+
 </section>
 
-<section>
-	<div>AC</div>
-	<div>${sheet.acManager.ac}</div>
+<section class="initiative">
+
+	<div class="subbedbox black initiative-title">
+		<span class="subbedbox-content">INITIATIVE</span>
+		<label class="subbedbox-subtitle">Modifier</label>
+	</div>
+
+	<div class="sumes initiative-bonus">
+		<div class="sum sum-total">
+			<div class="borderedbox">${sheet.initiative}</div>
+			<div class="sum-subtitle">TOTAL</div>
+		</div>
+	
+		<div class="sum sum-part">
+			<div class="borderedbox">1</div>
+			<div class="sum-subtitle">DEX Modifier</div>
+		</div>
+	
+		<div class="sum">
+			<div class="borderedbox">0</div>
+			<div class="sum-subtitle">MISC Modifier</div>
+		</div>
+	</div>
+
 </section>
-<section>
-	<div>AC - Touch</div>
-	<div>${sheet.acManager.touch}</div>
+
+<section class="ac">
+
+	<div class="subbedbox black ac-title">
+		<span class="subbedbox-content">AC</span>
+		<label class="subbedbox-subtitle">Armor Class</label>
+	</div>
+
+	<div class="sums ac-bonus">
+		<div class="sum sum-total">
+			<div class="borderedbox">25</div>
+			<div class="sum-subtitle">TOTAL</div>
+		</div>
+	
+		<div class="sum sum-constant sum-part">
+			<div class="sum-constant-content" >10</div>
+		</div>
+	
+		<div class="sum sum-part">
+			<div class="borderedbox">10</div>
+			<div class="sum-subtitle">Armor Bonus</div>
+		</div>
+	
+		<div class="sum sum-part">
+			<div class="borderedbox">3</div>
+			<div class="sum-subtitle">Shield Bonus</div>
+		</div>
+	
+		<div class="sum sum-part">
+			<div class="borderedbox">1</div>
+			<div class="sum-subtitle">DEX Modifier</div>
+		</div>
+	
+		<div class="sum sum-part">
+			<div class="borderedbox">1</div>
+			<div class="sum-subtitle">Size Modifier</div>
+		</div>
+	
+		<div class="sum sum-part">
+			<div class="borderedbox">0</div>
+			<div class="sum-subtitle">Natural Armor</div>
+		</div>
+	
+		<div class="sum sum-part">
+			<div class="borderedbox">0</div>
+			<div class="sum-subtitle">Deflection Modifier</div>
+		</div>
+	
+		<div class="sum">
+			<div class="borderedbox">0</div>
+			<div class="sum-subtitle">MISC Modifier</div>
+		</div>
+	</div>
+
 </section>
-<section>
-	<div>AC - Flat-Footed</div>
-	<div>${sheet.acManager.flatFooted}</div>
+
+<section class="touchAC">
+
+	<div class="subbedbox black initiative-title ac-title">
+		<span class="subbedbox-content">TOUCH</span>
+		<label class="subbedbox-subtitle">Armor Class</label>
+	</div>
+	<div class="sums ac-bonus">
+		<div class="borderedbox sum">${sheet.acManager.touch}</div>
+	</div>
+
+	<div class="subbedbox black initiative-title ac-title">
+		<span class="subbedbox-content">FLAT-FOOTED</span>
+		<label class="subbedbox-subtitle">Armor Class</label>
+	</div>
+	<div class="sums ac-bonus">
+		<div class="borderedbox sum">${sheet.acManager.flatFooted}</div>
+	</div>
+
+</section>
+
+<section class="flatfootedAC">
+
+
+
 </section>
 
 <section>
@@ -107,10 +219,6 @@
 	
 	<div>Ranged Bonus</div>
 	<div>${sheet.rangedBonus}</div>
-</section>
-<section>
-	<div>Initiative</div>
-	<div>${sheet.initiative }</div>
 </section>
 
 </body>
