@@ -1,4 +1,5 @@
 (function(){
+"use strict"
 	
 new Vue({
 	 el: "#sheet"
