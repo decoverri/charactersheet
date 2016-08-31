@@ -121,7 +121,7 @@
 			</div>
 		
 			<div class="sum sum-part">
-				<div class="borderedbox">1</div>
+				<div class="borderedbox">{{dexMod}}</div>
 				<div class="sum-subtitle">DEX Modifier</div>
 			</div>
 		
@@ -161,7 +161,7 @@
 			</div>
 		
 			<div class="sum sum-part">
-				<div class="borderedbox">1</div>
+				<div class="borderedbox">{{dexMod}}</div>
 				<div class="sum-subtitle">DEX Modifier</div>
 			</div>
 		
