@@ -142,7 +142,7 @@
 	
 		<div class="sums ac-bonus">
 			<div class="sum sum-total">
-				<div class="borderedbox">25</div>
+				<div class="borderedbox">{{ac}}</div>
 				<div class="sum-subtitle">TOTAL</div>
 			</div>
 		
@@ -197,7 +197,7 @@
 		<label class="subbedbox-subtitle">Armor Class</label>
 	</div>
 	<div class="sums ac-bonus">
-		<div class="borderedbox sum">${sheet.acManager.touch}</div>
+		<div class="borderedbox sum">{{touchAc}}</div>
 	</div>
 
 	<div class="subbedbox black initiative-title ac-title">
@@ -205,7 +205,7 @@
 		<label class="subbedbox-subtitle">Armor Class</label>
 	</div>
 	<div class="sums ac-bonus">
-		<div class="borderedbox sum">${sheet.acManager.flatFooted}</div>
+		<div class="borderedbox sum">{{flatfootedAc}}</div>
 	</div>
 
 </section>

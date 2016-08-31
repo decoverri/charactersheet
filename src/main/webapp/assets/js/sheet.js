@@ -47,23 +47,33 @@ new Vue({
 		 }
 
 		
-		,strMod: function () {
+		,strMod: function() {
 			return modifierFor(this.str);
 		}
-		,dexMod: function () {
+		,dexMod: function() {
 			return modifierFor(this.dex);
 		}
-		,conMod: function () {
+		,conMod: function() {
 			return modifierFor(this.con);
 		}
-		,intMod: function () {
+		,intMod: function() {
 			return modifierFor(this.int);
 		}
-		,wisMod: function () {
+		,wisMod: function() {
 			return modifierFor(this.wis);
 		}
-		,chaMod: function () {
+		,chaMod: function() {
 			return modifierFor(this.cha);
+		}
+		
+		,ac: function() {
+			return 10 + 10 + 3 + 1 + parseInt(this.dexMod);
+		}
+		,touchAc: function() {
+			return 10 + 1 + parseInt(this.dexMod);
+		}
+		,flatfootedAc: function() {
+			return 10 + 10 + 3 + 1;
 		}
 	}
 
