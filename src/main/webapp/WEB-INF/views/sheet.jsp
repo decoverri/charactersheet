@@ -73,7 +73,7 @@
 						<span class="subbedbox-content ability-name-short">${ability.shortName}</span>
 						<label class="subbedbox-subtitle">${ability.name}</label>
 					</td>
-					<td class="ability-data borderedbox ability-base-wrap"><input class="ability-base" type="number" value="{{${ability.shortName}Base}}" v-model="${ability.shortName}Base"></td>
+					<td class="ability-data borderedbox ability-base-wrap"><input class="ability-base" type="number" value="${ability.value}" v-model="${ability.shortName}Base"></td>
 					<td class="ability-data borderedbox">{{${ability.shortName}}}</td>
 					<td class="ability-data borderedbox">{{${ability.shortName}Mod}}</td>
 				</tr>
