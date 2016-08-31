@@ -211,14 +211,16 @@
 </section>
 
 <section>
+	<input type="hidden" value="${sheet.baseAtackBonus}" v-model="bab">
+
 	<div>Base Atack Bonus</div>
-	<div>${sheet.baseAtackBonus}</div>
+	<div>{{bab}}</div>
 	
 	<div>Melee Bonus</div>
-	<div>${sheet.meleeBonus}</div>
+	<div>{{meleeBonus}}</div>
 	
 	<div>Ranged Bonus</div>
-	<div>${sheet.rangedBonus}</div>
+	<div>{{rangedBonus}}</div>
 </section>
 
 

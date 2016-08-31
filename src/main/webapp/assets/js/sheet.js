@@ -19,6 +19,8 @@ new Vue({
 		,wisBonuses: [0]
 		,chaBonuses: [0]
 
+		,bab: 0
+
 	}
 
 	,computed: {
@@ -78,6 +80,13 @@ new Vue({
 		}
 		,flatfootedAc: function() {
 			return 10 + 10 + 3 + 1;
+		}
+		
+		,meleeBonus: function() {
+			return parseInt(this.bab) + parseInt(this.strMod);
+		}
+		,rangedBonus: function() {
+			return parseInt(this.bab) + parseInt(this.dexMod);
 		}
 	}
 
