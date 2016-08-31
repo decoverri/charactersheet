@@ -116,7 +116,7 @@
 	
 		<div class="sums initiative-bonus">
 			<div class="sum sum-total">
-				<div class="borderedbox">${sheet.initiative}</div>
+				<div class="borderedbox">{{initiative}}</div>
 				<div class="sum-subtitle">TOTAL</div>
 			</div>
 		

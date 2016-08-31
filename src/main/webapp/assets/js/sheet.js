@@ -66,6 +66,10 @@ new Vue({
 			return modifierFor(this.cha);
 		}
 		
+		,initiative: function(){
+			return this.dexMod;
+		}
+		
 		,ac: function() {
 			return 10 + 10 + 3 + 1 + parseInt(this.dexMod);
 		}
@@ -80,10 +84,9 @@ new Vue({
 });
 
 function modifierFor(ability){
-	if(ability){
+	if(!(ability < 0)){
 		return addSign( Math.floor( (ability - 10) / 2 ) );
 	}
-	return 0;
 }
 
 function addSign(number){
@@ -94,7 +97,11 @@ function addSign(number){
 }
 
 function getAbilityTotal(base, bonuses) {
-	return parseInt(base) + bonuses.reduce(function(a,b){return a+b;});
+	var total = parseInt(base) + bonuses.reduce(function(a,b){return a+b;})
+	if(isNaN(total) || total < 0){
+		return 0;
+	}
+	return total;
 }
 	
 })();
