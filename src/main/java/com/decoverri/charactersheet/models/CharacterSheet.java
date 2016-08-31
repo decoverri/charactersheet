@@ -81,4 +81,12 @@ public class CharacterSheet {
 	public Integer getInitiative(){
 		return this.dexterity.getModifier();
 	}
+	
+	public Integer getBaseHP(){
+		return character.getBaseHP();
+	}
+	
+	public Integer getCharacterLevel(){
+		return this.character.getLevels();
+	}
 }

@@ -19,6 +19,7 @@ public class Character {
 	private Integer wisdom;
 	private Integer charisma;
 	
+	private Integer baseHP;
 	private HPManager hpManager;
 
 	public String getName() {
@@ -116,10 +117,13 @@ public class Character {
 	public void setHpManager(HPManager hpManager) {
 		this.hpManager = hpManager;
 	}
-
-	@Override
-	public String toString() {
-		return player + "'s character: " + name + ", a " + race + " " + classes.get(0);
+	
+	public Integer getBaseHP() {
+		return baseHP;
+	}
+	
+	public void setBaseHP(Integer baseHP) {
+		this.baseHP = baseHP;
 	}
 
 	public Integer getBab() {
@@ -128,5 +132,14 @@ public class Character {
 			bab = classi.getBaseClass().getBabProgression().getBab(classi.getLevel());
 		}
 		return bab;
+	}
+
+	@Override
+	public String toString() {
+		return player + "'s character: " + name + ", a " + race + " " + classes.get(0);
+	}
+
+	public Integer getLevels() {
+		return classes.stream().mapToInt(levelInClass -> levelInClass.getLevel()).sum();
 	}
 }

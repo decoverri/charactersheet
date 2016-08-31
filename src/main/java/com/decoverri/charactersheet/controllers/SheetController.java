@@ -47,6 +47,8 @@ public class SheetController {
 		character.setWisdom(10);
 		character.setCharisma(23);
 		
+		character.setBaseHP(67);
+		
 		character.setHpManager(new HPManager(88, 88, 0));
 		CharacterSheet sheet = new CharacterSheetFactory().createSheetFor(character);
 		model.addAttribute("sheet",sheet);

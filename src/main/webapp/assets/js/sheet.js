@@ -5,7 +5,9 @@ new Vue({
 	
 	,data: {
 		
-		 strBase: 0
+		characterLevel: 0
+		
+		,strBase: 0
 		,dexBase: 0
 		,conBase: 0
 		,intBase: 0
@@ -19,12 +21,15 @@ new Vue({
 		,wisBonuses: [0]
 		,chaBonuses: [0]
 
+		,baseHP: 0
+
 		,bab: 0
 
 	}
 
 	,computed: {
 
+		//****** Abilities ******
 		 str: function(){
 			 return getAbilityTotal(this.strBase, this.strBonuses);
 		 }
@@ -48,7 +53,7 @@ new Vue({
 			 return getAbilityTotal(this.chaBase, this.chaBonuses);
 		 }
 
-		
+		//****** Abilities Modifiers ******		
 		,strMod: function() {
 			return modifierFor(this.str);
 		}
@@ -68,20 +73,28 @@ new Vue({
 			return modifierFor(this.cha);
 		}
 		
+		//****** HP ******
+		,totalHP: function() {
+			return parseInt(this.baseHP) + parseInt(this.characterLevel) * (parseInt(this.conMod));
+		}
+		
+		//****** Initiative ******
 		,initiative: function(){
 			return this.dexMod;
 		}
 		
-		,ac: function() {
+		//****** AC ******
+		,AC: function() {
 			return 10 + 10 + 3 + 1 + parseInt(this.dexMod);
 		}
-		,touchAc: function() {
+		,touchAC: function() {
 			return 10 + 1 + parseInt(this.dexMod);
 		}
-		,flatfootedAc: function() {
+		,flatfootedAC: function() {
 			return 10 + 10 + 3 + 1;
 		}
 		
+		//****** Attack ******
 		,meleeBonus: function() {
 			return parseInt(this.bab) + parseInt(this.strMod);
 		}

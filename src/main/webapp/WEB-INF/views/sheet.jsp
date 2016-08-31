@@ -19,6 +19,8 @@
 
 <section class="personal">
 
+	<input type="hidden" value="${sheet.characterLevel}" v-model="characterLevel">
+
 	<div class="name personal-item">
 		<div>${sheet.name}</div>
 		<label class="personal-item-label">Character Name</label>
@@ -85,6 +87,7 @@
 	
 	<section class="hp">
 	
+		<input type="hidden" value="${sheet.baseHP}" v-model="baseHP" >
 		<div class="subbedbox black">
 			<span class="subbedbox-content">HP</span>
 			<label class="subbedbox-subtitle">Hit Points</label>
@@ -92,7 +95,7 @@
 	
 		<div class="borderedbox">
 			<div class="borderedbox-title">Total</div>
-			<div class="borderedbox-content">${sheet.hpManager.total}</div>
+			<div class="borderedbox-content">{{totalHP}}</div>
 		</div>
 	
 		<div class="borderedbox">
@@ -142,7 +145,7 @@
 	
 		<div class="sums ac-bonus">
 			<div class="sum sum-total">
-				<div class="borderedbox">{{ac}}</div>
+				<div class="borderedbox">{{AC}}</div>
 				<div class="sum-subtitle">TOTAL</div>
 			</div>
 		
@@ -197,7 +200,7 @@
 		<label class="subbedbox-subtitle">Armor Class</label>
 	</div>
 	<div class="sums ac-bonus">
-		<div class="borderedbox sum">{{touchAc}}</div>
+		<div class="borderedbox sum">{{touchAC}}</div>
 	</div>
 
 	<div class="subbedbox black initiative-title ac-title">
@@ -205,7 +208,7 @@
 		<label class="subbedbox-subtitle">Armor Class</label>
 	</div>
 	<div class="sums ac-bonus">
-		<div class="borderedbox sum">{{flatfootedAc}}</div>
+		<div class="borderedbox sum">{{flatfootedAC}}</div>
 	</div>
 
 </section>
