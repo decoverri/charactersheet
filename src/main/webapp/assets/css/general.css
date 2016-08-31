@@ -41,6 +41,16 @@ body {
 	width: 3em;
 	display: inline-block;
 	vertical-align: top;
+	margin-right: .3em;
+}
+
+.sum-part-wrap{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.sum-total {
+	flex-shrink: 0;
 }
 
 .sum-total, .sum-part {
@@ -66,10 +76,12 @@ body {
 	font-size: .7em;
 }
 
-.sum-constant {
-	width: 2em;	
-}
-
 .sum-constant-content {
 	font-size: 1.4em;
+}
+
+@media (min-width: 850px){
+	body {
+		margin: 0 10%;
+	}
 }
