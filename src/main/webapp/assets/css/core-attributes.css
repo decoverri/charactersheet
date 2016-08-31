@@ -36,7 +36,8 @@
 	width: 7em;
 }
 
-.hp, .initiative, .ac, .touchAC, .flatfootedAC {
+.hp, .initiative, .ac,
+.touchAndFlat {
 	margin: .45em;
 }
 

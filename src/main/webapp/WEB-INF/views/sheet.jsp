@@ -192,27 +192,28 @@
 	
 	</section>
 	
+	<section class="touchAndFlat">
+	
+		<div class="subbedbox black initiative-title ac-title">
+			<span class="subbedbox-content">TOUCH</span>
+			<label class="subbedbox-subtitle">Armor Class</label>
+		</div>
+		<div class="sums ac-bonus">
+			<div class="borderedbox sum">{{touchAC}}</div>
+		</div>
+	
+		<div class="subbedbox black initiative-title ac-title">
+			<span class="subbedbox-content">FLAT-FOOTED</span>
+			<label class="subbedbox-subtitle">Armor Class</label>
+		</div>
+		<div class="sums ac-bonus">
+			<div class="borderedbox sum">{{flatfootedAC}}</div>
+		</div>
+	
+	</section>
+
 </section>
 
-<section class="touchAC">
-
-	<div class="subbedbox black initiative-title ac-title">
-		<span class="subbedbox-content">TOUCH</span>
-		<label class="subbedbox-subtitle">Armor Class</label>
-	</div>
-	<div class="sums ac-bonus">
-		<div class="borderedbox sum">{{touchAC}}</div>
-	</div>
-
-	<div class="subbedbox black initiative-title ac-title">
-		<span class="subbedbox-content">FLAT-FOOTED</span>
-		<label class="subbedbox-subtitle">Armor Class</label>
-	</div>
-	<div class="sums ac-bonus">
-		<div class="borderedbox sum">{{flatfootedAC}}</div>
-	</div>
-
-</section>
 
 <section>
 	<input type="hidden" value="${sheet.baseAtackBonus}" v-model="bab">
