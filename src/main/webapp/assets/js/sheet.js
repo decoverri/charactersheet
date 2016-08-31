@@ -107,7 +107,7 @@ new Vue({
 
 function modifierFor(ability){
 	if(!(ability < 0)){
-		return addSign( Math.floor( (ability - 10) / 2 ) );
+		return Math.floor( (ability - 10) / 2 );
 	}
 }
 

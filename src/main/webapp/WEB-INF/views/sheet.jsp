@@ -77,7 +77,7 @@
 					</td>
 					<td class="ability-data borderedbox ability-base-wrap"><input class="ability-base" type="number" value="${ability.value}" v-model="${ability.shortName}Base"></td>
 					<td class="ability-data borderedbox">{{${ability.shortName}}}</td>
-					<td class="ability-data borderedbox">{{${ability.shortName}Mod}}</td>
+					<td class="ability-data borderedbox"><span v-if="${ability.shortName}Mod >= 0" >+</span>{{${ability.shortName}Mod}}</td>
 				</tr>
 			</c:forEach>
 		
@@ -119,7 +119,7 @@
 	
 		<div class="sums initiative-bonus">
 			<div class="sum sum-total">
-				<div class="borderedbox">{{initiative}}</div>
+				<div class="borderedbox"><span v-if="initiative >= 0" >+</span>{{initiative}}</div>
 				<div class="sum-subtitle">TOTAL</div>
 			</div>
 		
