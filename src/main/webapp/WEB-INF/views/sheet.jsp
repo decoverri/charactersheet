@@ -10,7 +10,6 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/general.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/personal.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/core-attributes.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/ac.css">
 	
 	<title>Character Sheet</title>
 </head>
@@ -118,12 +117,12 @@
 			<label class="subbedbox-subtitle">Modifier</label>
 		</div>
 	
-		<div class="sums initiative-bonus">
-			<div class="sum sum-total">
-				<div class="borderedbox"><span v-if="initiative >= 0" >+</span>{{initiative}}</div>
-				<div class="sum-subtitle">TOTAL</div>
-			</div>
+		<div class="sum sum-total">
+			<div class="borderedbox"><span v-if="initiative >= 0" >+</span>{{initiative}}</div>
+			<div class="sum-subtitle">TOTAL</div>
+		</div>
 
+		<div class="sum-part-wrap" >
 			<div class="sum sum-part">
 				<div class="borderedbox">{{dexMod}}</div>
 				<div class="sum-subtitle">DEX Modifier</div>

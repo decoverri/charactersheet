@@ -41,12 +41,28 @@
 	margin: .45em;
 }
 
-.initiative-title, .initiative-bonus, 
-.ac-title, .ac-bonus {
-	display: inline-block;
-	vertical-align: top;
+.initiative {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.initiative-title, .ac-title {
+	margin-right: .5em;
+	height: 1.6em;
+	flex-basis: 3em;
+	flex-shrink: 0;
 }
 
 .initiative-bonus, .ac-bonus {
 	padding: .2em;
+}
+
+.ac {
+	display: flex;
+	width: 42em;
+}
+
+.ac-title, .ac-bonus {
+	display: inline-block;
+	vertical-align: top;
 }
