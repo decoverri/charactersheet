@@ -1,5 +1,5 @@
 (function(){
-
+	
 new Vue({
 	 el: "#sheet"
 	
@@ -22,6 +22,9 @@ new Vue({
 		,chaBonuses: [0]
 
 		,baseHP: 0
+		,damage: 0
+		,nonlethalDamage: 0
+		,hit: 0
 
 		,bab: 0
 
@@ -77,6 +80,9 @@ new Vue({
 		,totalHP: function() {
 			return parseInt(this.baseHP) + parseInt(this.characterLevel) * (parseInt(this.conMod));
 		}
+		,currentHP: function() {
+			return this.totalHP - parseInt(this.damage);
+		}
 		
 		//****** Initiative ******
 		,initiative: function(){
@@ -100,6 +106,37 @@ new Vue({
 		}
 		,rangedBonus: function() {
 			return parseInt(this.bab) + parseInt(this.dexMod);
+		}
+	}
+	
+	,methods: {
+		 takeDamage: function(){
+			this.damage = parseInt(this.damage) + parseInt(this.hit);
+		 }
+		,heal: function(){
+			var _damage = parseInt(this.damage) - parseInt(this.hit);
+			var _nldamage = parseInt(this.nonlethalDamage) - parseInt(this.hit);
+			if(_damage > 0){
+				this.damage = _damage;				
+			}else{
+				this.damage = 0;
+			}
+			if(_nldamage > 0){
+				this.nonlethalDamage = _nldamage;				
+			}else{
+				this.nonlethalDamage = 0;
+			}
+		}
+		,takeNonlethalDamage: function(){
+			this.nonlethalDamage = parseInt(this.nonlethalDamage) + parseInt(this.hit);			
+		}
+		,healNonlethalDamage: function(){
+			var _nldamage = parseInt(this.nonlethalDamage) - parseInt(this.hit);
+			if(_nldamage > 0){
+				this.nonlethalDamage = _nldamage;				
+			}else{
+				this.nonlethalDamage = 0;
+			}
 		}
 	}
 

@@ -100,13 +100,19 @@
 	
 		<div class="borderedbox">
 			<div class="borderedbox-title">Current HP</div>
-			<div class="borderedbox-content">${sheet.hpManager.current}</div>
+			<div class="borderedbox-content">{{currentHP}}</div>
 		</div>
 	
 		<div class="borderedbox">
 			<div class="borderedbox-title">Nonlethal Damage</div>
-			<div class="borderedbox-content">${sheet.hpManager.nonlethalDamage}</div>
+			<div class="borderedbox-content">{{nonlethalDamage}}</div>
 		</div>
+		
+		<input type="number" v-model="hit">
+		<button @click="takeDamage">Take damage</button>
+		<button @click="heal">Heal</button>
+		<button @click="takeNonlethalDamage">Take nonlethal damage</button>
+		<button @click="healNonlethalDamage">Heal nonlethal damage</button>
 	
 	</section>
 	
