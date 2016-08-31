@@ -5,12 +5,31 @@
 
 .abilities {
 	margin: .3em;
-    width: 12em;
+    width: 17em;
     text-align: center;
 }
 
 .abilities-title {
 	font-size: .6em;
+}
+
+.ability-base-wrap {
+	text-align: right;
+}
+
+.ability-data {
+	width: 3.4em;	
+}
+
+.ability-name-short {
+	text-transform: uppercase;
+}
+
+.ability-base {
+	border: 0;
+	width: 3em;
+	text-align: center;
+	color: #666;
 }
 
 .hp {

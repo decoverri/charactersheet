@@ -13,7 +13,7 @@
 	
 	<title>Character Sheet</title>
 </head>
-<body>
+<body id="sheet">
 
 <h1>Pathfinder Character Sheet</h1>
 
@@ -62,18 +62,20 @@
 		<table>
 			<tr>
 				<th class="abilities-title">Ability Name</th>
+				<th class="abilities-title">Base Value</th>
 				<th class="abilities-title">Ability Score</th>
 				<th class="abilities-title">Ability Modifier</th>
 			</tr>
 			
 			<c:forEach items="${sheet.abilities}" var="ability" >
 				<tr class="ability">
-					<td class="ability-name subbedbox black">
-						<span class="subbedbox-content">${ability.shortName}</span>
+					<td class="ability-data ability-name subbedbox black">
+						<span class="subbedbox-content ability-name-short">${ability.shortName}</span>
 						<label class="subbedbox-subtitle">${ability.name}</label>
 					</td>
-					<td class="borderedbox">${ability.value}</td>
-					<td class="borderedbox">${ability.formattedModifier}</td>
+					<td class="ability-data borderedbox ability-base-wrap"><input class="ability-base" type="number" value="{{${ability.shortName}Base}}" v-model="${ability.shortName}Base"></td>
+					<td class="ability-data borderedbox">{{${ability.shortName}}}</td>
+					<td class="ability-data borderedbox">{{${ability.shortName}Mod}}</td>
 				</tr>
 			</c:forEach>
 		
@@ -219,5 +221,8 @@
 	<div>${sheet.rangedBonus}</div>
 </section>
 
+
+<script src="assets/js/vue.js"></script>
+<script src="assets/js/sheet.js"></script>
 </body>
 </html>

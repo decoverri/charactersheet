@@ -32,6 +32,6 @@ public class Ability {
 	}
 
 	public String getShortName() {
-		return name.substring(0, 3).toUpperCase();
+		return name.substring(0, 3).toLowerCase();
 	}
 }
