@@ -19,6 +19,9 @@ public class Skill {
 
 	@NotNull
 	private String ability;
+	
+	@Transient
+	private Integer ranks = 0;
 
 	@Transient
 	private Boolean ofClass;
@@ -37,6 +40,14 @@ public class Skill {
 
 	public void setAbility(String ability) {
 		this.ability = ability;
+	}
+
+	public Integer getRanks() {
+		return ranks;
+	}
+
+	public void setRanks(Integer ranks) {
+		this.ranks = ranks;
 	}
 
 	public Boolean getOfClass() {

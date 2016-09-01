@@ -91,4 +91,12 @@ public class CharacterSheet {
 	public Integer getCharacterLevel(){
 		return this.character.getLevels();
 	}
+	
+	public List<Skill> getSkills(){
+		return this.skills;
+	}
+
+	public void setSkills(List<Skill> skills) {
+		this.skills = skills;
+	}
 }
