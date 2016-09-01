@@ -28,7 +28,72 @@ new Vue({
 		,hit: ''
 
 		,bab: 0
-
+		
+		,acrobaticsRanks: 0
+		,appraiseRanks: 0
+		,bluffRanks: 0
+		,climbRanks: 0
+		,diplomacyRanks: 0
+		,disabledeviceRanks: 0
+		,disguiseRanks: 0
+		,escapeartistRanks: 0
+		,flyRanks: 0
+		,handleanimalRanks: 0
+		,healRanks: 0
+		,intimidateRanks: 0
+		,knowledgearcanaRanks: 0
+		,knowledgedungeoneeringRanks: 0
+		,knowledgeengineeringRanks: 0
+		,knowledgegeographyRanks: 0
+		,knowledgehistoryRanks: 0
+		,knowledgelocalRanks: 0
+		,knowledgenatureRanks: 0
+		,knowledgenobilityRanks: 0
+		,knowledgeplanesRanks: 0
+		,knowledgereligionRanks: 0
+		,linguisticsRanks: 0
+		,perceptionRanks: 0
+		,rideRanks: 0
+		,sensemotiveRanks: 0
+		,sleightofhandRanks: 0
+		,spellcraftRanks: 0
+		,stealthRanks: 0
+		,survivalRanks: 0
+		,swimRanks: 0
+		,usemagicdeviceRanks: 0
+		
+		,acrobaticsBonuses: [0]
+		,appraiseBonuses: [0]
+		,bluffBonuses: [0]
+		,climbBonuses: [0]
+		,diplomacyBonuses: [0]
+		,disabledeviceBonuses: [0]
+		,disguiseBonuses: [0]
+		,escapeartistBonuses: [0]
+		,flyBonuses: [0]
+		,handleanimalBonuses: [0]
+		,healBonuses: [0]
+		,intimidateBonuses: [0]
+		,knowledgearcanaBonuses: [0]
+		,knowledgedungeoneeringBonuses: [0]
+		,knowledgeengineeringBonuses: [0]
+		,knowledgegeographyBonuses: [0]
+		,knowledgehistoryBonuses: [0]
+		,knowledgelocalBonuses: [0]
+		,knowledgenatureBonuses: [0]
+		,knowledgenobilityBonuses: [0]
+		,knowledgeplanesBonuses: [0]
+		,knowledgereligionBonuses: [0]
+		,linguisticsBonuses: [0]
+		,perceptionBonuses: [0]
+		,rideBonuses: [0]
+		,sensemotiveBonuses: [0]
+		,sleightofhandBonuses: [0]
+		,spellcraftBonuses: [0]
+		,stealthBonuses: [0]
+		,survivalBonuses: [0]
+		,swimBonuses: [0]
+		,usemagicdeviceBonuses: [0]
 	}
 
 	,computed: {
@@ -108,6 +173,105 @@ new Vue({
 		,rangedBonus: function() {
 			return parseInt(this.bab) + parseInt(this.dexMod);
 		}
+		
+		//****** Abilities ******
+		,acrobaticsTotal : function() {
+			return skillTotal(this.acrobaticsRanks, this.dexMod, this.acrobaticsBonuses);
+		}
+		,appraiseTotal : function() {
+			return skillTotal(this.appraiseRanks, this.intMod, this.appraiseBonuses);
+		}
+		,bluffTotal : function() {
+			return skillTotal(this.bluffRanks, this.chaMod, this.bluffBonuses);
+		}
+		,climbTotal : function() {
+			return skillTotal(this.climbRanks, this.strMod, this.climbBonuses);
+		}
+		,diplomacyTotal : function() {
+			return skillTotal(this.diplomacyRanks, this.chaMod, this.diplomacyBonuses);
+		}
+		,disabledeviceTotal : function() {
+			return skillTotal(this.disabledeviceRanks, this.dexMod, this.disabledeviceBonuses);
+		}
+		,disguiseTotal : function() {
+			return skillTotal(this.disguiseRanks, this.chaMod, this.disguiseBonuses);
+		}
+		,escapeartistTotal : function() {
+			return skillTotal(this.escapeartistRanks, this.dexMod, this.escapeartistBonuses);
+		}
+		,flyTotal : function() {
+			return skillTotal(this.flyRanks, this.dexMod, this.flyBonuses);
+		}
+		,handleanimalTotal : function() {
+			return skillTotal(this.handleanimalRanks, this.chaMod,this.handleanimalBonuses);
+		}
+		,healTotal : function() {
+			return skillTotal(this.healRanks, this.wisMod, this.healBonuses);
+		}
+		,intimidateTotal : function() {
+			return skillTotal(this.intimidateRanks, this.chaMod, this.intimidateBonuses);
+		}
+		,knowledgearcanaTotal : function() {
+			return skillTotal(this.knowledgearcanaRanks, this.intMod, this.knowledgearcanaBonuses);
+		}
+		,knowledgedungeoneeringTotal : function() {
+			return skillTotal(this.knowledgedungeoneeringRanks, this.intMod, this.knowledgedungeoneeringBonuses);
+		}
+		,knowledgeengineeringTotal : function() {
+			return skillTotal(this.knowledgeengineeringRanks, this.intMod, this.knowledgeengineeringBonuses);
+		}
+		,knowledgegeographyTotal : function() {
+			return skillTotal(this.knowledgegeographyRanks, this.intMod, this.knowledgegeographyBonuses);
+		}
+		,knowledgehistoryTotal : function() {
+			return skillTotal(this.knowledgehistoryRanks, this.intMod, this.knowledgehistoryBonuses);
+		}
+		,knowledgelocalTotal : function() {
+			return skillTotal(this.knowledgelocalRanks, this.intMod, this.knowledgelocalBonuses);
+		}
+		,knowledgenatureTotal : function() {
+			return skillTotal(this.knowledgenatureRanks, this.intMod, this.knowledgenatureBonuses);
+		}
+		,knowledgenobilityTotal : function() {
+			return skillTotal(this.knowledgenobilityRanks, this.intMod, this.knowledgenobilityBonuses);
+		}
+		,knowledgeplanesTotal : function() {
+			return skillTotal(this.knowledgeplanesRanks, this.intMod, this.knowledgeplanesBonuses);
+		}
+		,knowledgereligionTotal : function() {
+			return skillTotal(this.knowledgereligionRanks, this.intMod, this.knowledgereligionBonuses);
+		}
+		,linguisticsTotal : function() {
+			return skillTotal(this.linguisticsRanks, this.intMod, this.linguisticsBonuses);
+		}
+		,perceptionTotal : function() {
+			return skillTotal(this.perceptionRanks, this.wisMod, this.perceptionBonuses);
+		}
+		,rideTotal : function() {
+			return skillTotal(this.rideRanks, this.dexMod, this.rideBonuses);
+		}
+		,sensemotiveTotal : function() {
+			return skillTotal(this.sensemotiveRanks, this.wisMod, this.sensemotiveBonuses);
+		}
+		,sleightofhandTotal : function() {
+			return skillTotal(this.sleightofhandRanks, this.dexMod, this.sleightofhandBonuses);
+		}
+		,spellcraftTotal : function() {
+			return skillTotal(this.spellcraftRanks, this.intMod, this.spellcraftBonuses);
+		}
+		,stealthTotal : function() {
+			return skillTotal(this.stealthRanks, this.dexMod, this.stealthBonuses);
+		}
+		,survivalTotal : function() {
+			return skillTotal(this.survivalRanks, this.wisMod, this.survivalBonuses);
+		}
+		,swimTotal : function() {
+			return skillTotal(this.swimRanks, this.strMod, this.swimBonuses);
+		}
+		,usemagicdeviceTotal : function() {
+			return skillTotal(this.usemagicdeviceRanks, this.chaMod, this.usemagicdeviceBonuses);
+		}
+		
 	}
 	
 	,methods: {
@@ -176,6 +340,10 @@ function getAbilityTotal(base, bonuses) {
 		return 0;
 	}
 	return total;
+}
+
+function skillTotal(ranks, ability, bonuses){
+	return parseInt(ranks) + parseInt(ability) + bonuses.reduce(function(a,b){return a+b;});
 }
 	
 })();
