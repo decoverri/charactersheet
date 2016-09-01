@@ -18,6 +18,8 @@ public class CharacterSheet {
 
 	private AcManager acManager;
 	
+	private List<Skill> skills;
+	
 	public void setCharacter(Character character) {
 		this.character = character;
 		strength = new Ability(character.getStrength(), "Strength");        

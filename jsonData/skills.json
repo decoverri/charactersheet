@@ -1,0 +1,32 @@
+{"skill":{"name":"acrobatics","ability":"dex"}}
+{"skill":{"name":"appraise","ability":"int"}}
+{"skill":{"name":"bluff","ability":"cha"}}
+{"skill":{"name":"climb","ability":"str"}}
+{"skill":{"name":"diplomacy","ability":"cha"}}
+{"skill":{"name":"disable device","ability":"dex"}}
+{"skill":{"name":"disguise","ability":"cha"}}
+{"skill":{"name":"escape artist","ability":"dex"}}
+{"skill":{"name":"fly","ability":"dex"}}
+{"skill":{"name":"handle animal","ability":"cha"}}
+{"skill":{"name":"heal","ability":"wis"}}
+{"skill":{"name":"intimidate","ability":"cha"}}
+{"skill":{"name":"knowledge(arcana)","ability":"int"}}
+{"skill":{"name":"knowledge(dungeoneering)","ability":"int"}}
+{"skill":{"name":"knowledge(engineering)","ability":"int"}}
+{"skill":{"name":"knowledge(geography)","ability":"int"}}
+{"skill":{"name":"knowledge(history)","ability":"int"}}
+{"skill":{"name":"knowledge(local)","ability":"int"}}
+{"skill":{"name":"knowledge(nature)","ability":"int"}}
+{"skill":{"name":"knowledge(nobility)","ability":"int"}}
+{"skill":{"name":"knowledge(planes)","ability":"int"}}
+{"skill":{"name":"knowledge(religion)","ability":"int"}}
+{"skill":{"name":"linguistics","ability":"int"}}
+{"skill":{"name":"perception","ability":"wis"}}
+{"skill":{"name":"ride","ability":"dex"}}
+{"skill":{"name":"sense motive","ability":"wis"}}
+{"skill":{"name":"sleight of hand","ability":"dex"}}
+{"skill":{"name":"spellcraft","ability":"int"}}
+{"skill":{"name":"stealth","ability":"dex"}}
+{"skill":{"name":"survival","ability":"wis"}}
+{"skill":{"name":"swim","ability":"str"}}
+{"skill":{"name":"use magic device","ability":"cha"}}

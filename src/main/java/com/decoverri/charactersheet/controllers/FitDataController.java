@@ -13,8 +13,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.decoverri.charactersheet.daos.BaseClassDao;
 import com.decoverri.charactersheet.daos.RaceDao;
+import com.decoverri.charactersheet.daos.SkillDao;
 import com.decoverri.charactersheet.models.BaseClass;
 import com.decoverri.charactersheet.models.Race;
+import com.decoverri.charactersheet.models.Skill;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver;
 
@@ -34,11 +36,15 @@ public class FitDataController {
 	@Autowired
 	private RaceDao raceDao;
 
+	@Autowired
+	private SkillDao skillDao;
+
 	@RequestMapping("/")
 	@ResponseBody
 	public void fitDdata() throws Exception{
 		createBaseClasses();
 		createRaces();
+		createSkills();
 	}
 
 	private String formatFileName(String fileName){
@@ -57,7 +63,7 @@ public class FitDataController {
 			String nextClass = scanner.nextLine();
 			BaseClass baseClass = (BaseClass) xstream.fromXML(nextClass);
 			System.out.println(baseClassDao);
-			baseClassDao.saveOrUpdateByName(baseClass);
+			baseClassDao.saveNew(baseClass);
 		}
 				
 	}
@@ -72,6 +78,17 @@ public class FitDataController {
 			raceDao.saveOrUpdateByName(race);
 		}
 				
+	}
+	
+	private void createSkills() throws Exception {
+		xstream.alias("skill", Skill.class);
+		
+		Scanner scanner = createScannerFor("skills");
+		while(scanner.hasNextLine()){
+			String nextSkill = scanner.nextLine();
+			Skill skill = (Skill) xstream.fromXML(nextSkill);
+			skillDao.saveOrUpdateByName(skill);
+		}
 	}
 
 }

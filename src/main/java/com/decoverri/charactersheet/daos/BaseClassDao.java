@@ -15,12 +15,10 @@ public class BaseClassDao {
 	@PersistenceContext
 	private EntityManager manager;
 
-	public void saveOrUpdateByName(BaseClass baseClass) {
+	public void saveNew(BaseClass baseClass) {
 		BaseClass loaded = findByName(baseClass.getName());
 		if (loaded == null) {
 			manager.persist(baseClass);
-		} else {
-			manager.merge(baseClass);
 		}
 	}
 
