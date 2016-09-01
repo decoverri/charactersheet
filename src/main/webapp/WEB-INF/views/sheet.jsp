@@ -252,14 +252,14 @@
 				<tr>
 					<td><input type="checkbox" value="true" ${skill.ofClass ? 'checked' : '' } ></td>
 					<td>${skill.name}</td>
-					<td>{{${skill.name}Total}}</td>
+					<td>{{${skill.keyName}Total}}</td>
 					<td>${skill.ability}</td>
 					<td>{{${skill.ability}Mod}}</td>
-					<td><input type="number" value="${skill.ranks}" v-model="${skill.name}Ranks" min="0" max="{{characterLevel}}"></td>
-					<td>{{${skill.name}Bonuses}}</td>
+					<td><input type="number" value="${skill.ranks}" v-model="${skill.keyName}Ranks" min="0" max="{{characterLevel}}"></td>
+					<td>{{${skill.keyName}Bonuses}}</td>
 				</tr>
 			</c:forEach>
-		</tbody>				
+		</tbody>
 	</table>
 	
 </section>
