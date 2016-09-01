@@ -219,8 +219,7 @@
 
 </section>
 
-
-<section>
+<section class="attacks">
 	<input type="hidden" value="${sheet.baseAtackBonus}" v-model="bab">
 
 	<div>Base Atack Bonus</div>
@@ -231,6 +230,38 @@
 	
 	<div>Ranged Bonus</div>
 	<div>{{rangedBonus}}</div>
+</section>
+
+<section class="skills">
+	<h1>Skills</h1>
+	
+	<table>
+		<thead>
+			<tr>
+				<th></th>
+				<th>Skill Names</th>
+				<th>Total Bonus</th>
+				<th></th>
+				<th>Ability Mod.</th>
+				<th>Ranks</th>
+				<th>Misc. Mod.</th>
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach items="${sheet.skills}" var="skill">
+				<tr>
+					<td><input type="checkbox" value="true" ${skill.ofClass ? 'checked' : '' } ></td>
+					<td>${skill.name}</td>
+					<td>{{${skill.name}Total}}</td>
+					<td>${skill.ability}</td>
+					<td>{{${skill.ability}Mod}}</td>
+					<td><input type="number" value="${skill.ranks}" v-model="${skill.name}Ranks" ></td>
+					<td>{{${skill.name}Bonuses}}</td>
+				</tr>
+			</c:forEach>
+		</tbody>				
+	</table>
+	
 </section>
 
 
