@@ -62,7 +62,6 @@ public class FitDataController {
 		while(scanner.hasNextLine()){
 			String nextClass = scanner.nextLine();
 			BaseClass baseClass = (BaseClass) xstream.fromXML(nextClass);
-			System.out.println(baseClassDao);
 			baseClassDao.saveNew(baseClass);
 		}
 				
