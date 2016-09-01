@@ -75,7 +75,7 @@ public class FitDataController {
 		while(scanner.hasNextLine()){
 			String nextRace = scanner.nextLine();
 			Race race = (Race) xstream.fromXML(nextRace);
-			raceDao.saveOrUpdateByName(race);
+			raceDao.saveNew(race);
 		}
 				
 	}
@@ -87,7 +87,7 @@ public class FitDataController {
 		while(scanner.hasNextLine()){
 			String nextSkill = scanner.nextLine();
 			Skill skill = (Skill) xstream.fromXML(nextSkill);
-			skillDao.saveOrUpdateByName(skill);
+			skillDao.saveNew(skill);
 		}
 	}
 

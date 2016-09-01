@@ -15,12 +15,10 @@ public class RaceDao {
 	@PersistenceContext
 	private EntityManager manager;
 
-	public void saveOrUpdateByName(Race race) {
+	public void saveNew(Race race) {
 		Race loaded = findByName(race.getName());
 		if (loaded == null) {
 			manager.persist(race);
-		} else {
-			manager.merge(race);
 		}
 	}
 

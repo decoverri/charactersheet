@@ -16,12 +16,10 @@ public class SkillDao {
 	@PersistenceContext
 	private EntityManager manager;
 
-	public void saveOrUpdateByName(Skill skill) {
+	public void saveNew(Skill skill) {
 		Skill loaded = findByName(skill.getName());
 		if (loaded == null) {
 			manager.persist(skill);
-		} else {
-			manager.merge(skill);
 		}
 	}
 	
