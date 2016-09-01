@@ -75,7 +75,7 @@
 						<span class="subbedbox-content ability-name-short">${ability.shortName}</span>
 						<label class="subbedbox-subtitle">${ability.name}</label>
 					</td>
-					<td class="ability-data borderedbox ability-base-wrap"><input class="ability-base" type="number" value="${ability.value}" v-model="${ability.shortName}Base"></td>
+					<td class="ability-data borderedbox ability-base-wrap"><input class="ability-base" type="number" value="${ability.value}" v-model="${ability.shortName}Base" min="0"></td>
 					<td class="ability-data borderedbox">{{${ability.shortName}}}</td>
 					<td class="ability-data borderedbox"><span v-if="${ability.shortName}Mod >= 0" >+</span>{{${ability.shortName}Mod}}</td>
 				</tr>
@@ -255,7 +255,7 @@
 					<td>{{${skill.name}Total}}</td>
 					<td>${skill.ability}</td>
 					<td>{{${skill.ability}Mod}}</td>
-					<td><input type="number" value="${skill.ranks}" v-model="${skill.name}Ranks" ></td>
+					<td><input type="number" value="${skill.ranks}" v-model="${skill.name}Ranks" min="0" max="{{characterLevel}}"></td>
 					<td>{{${skill.name}Bonuses}}</td>
 				</tr>
 			</c:forEach>
