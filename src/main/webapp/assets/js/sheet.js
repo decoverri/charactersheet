@@ -94,6 +94,8 @@ new Vue({
 		,survivalBonuses: [0]
 		,swimBonuses: [0]
 		,usemagicdeviceBonuses: [0]
+
+		,classSkills: []
 	}
 
 	,computed: {
@@ -176,100 +178,100 @@ new Vue({
 		
 		//****** Abilities ******
 		,acrobaticsTotal : function() {
-			return skillTotal(this.acrobaticsRanks, this.dexMod, this.acrobaticsBonuses);
+			return skillTotal(this.acrobaticsRanks, this.dexMod, this.acrobaticsBonuses, this.classSkills.indexOf("acrobatics"));
 		}
 		,appraiseTotal : function() {
-			return skillTotal(this.appraiseRanks, this.intMod, this.appraiseBonuses);
+			return skillTotal(this.appraiseRanks, this.intMod, this.appraiseBonuses, this.classSkills.indexOf("appraise"));
 		}
 		,bluffTotal : function() {
-			return skillTotal(this.bluffRanks, this.chaMod, this.bluffBonuses);
+			return skillTotal(this.bluffRanks, this.chaMod, this.bluffBonuses, this.classSkills.indexOf("bluff"));
 		}
 		,climbTotal : function() {
-			return skillTotal(this.climbRanks, this.strMod, this.climbBonuses);
+			return skillTotal(this.climbRanks, this.strMod, this.climbBonuses, this.classSkills.indexOf("climb"));
 		}
 		,diplomacyTotal : function() {
-			return skillTotal(this.diplomacyRanks, this.chaMod, this.diplomacyBonuses);
+			return skillTotal(this.diplomacyRanks, this.chaMod, this.diplomacyBonuses, this.classSkills.indexOf("diplomacy"));
 		}
 		,disabledeviceTotal : function() {
-			return skillTotal(this.disabledeviceRanks, this.dexMod, this.disabledeviceBonuses);
+			return skillTotal(this.disabledeviceRanks, this.dexMod, this.disabledeviceBonuses, this.classSkills.indexOf("disabledevice"));
 		}
 		,disguiseTotal : function() {
-			return skillTotal(this.disguiseRanks, this.chaMod, this.disguiseBonuses);
+			return skillTotal(this.disguiseRanks, this.chaMod, this.disguiseBonuses, this.classSkills.indexOf("disguise"));
 		}
 		,escapeartistTotal : function() {
-			return skillTotal(this.escapeartistRanks, this.dexMod, this.escapeartistBonuses);
+			return skillTotal(this.escapeartistRanks, this.dexMod, this.escapeartistBonuses, this.classSkills.indexOf("escapeartist"));
 		}
 		,flyTotal : function() {
-			return skillTotal(this.flyRanks, this.dexMod, this.flyBonuses);
+			return skillTotal(this.flyRanks, this.dexMod, this.flyBonuses, this.classSkills.indexOf("fly"));
 		}
 		,handleanimalTotal : function() {
-			return skillTotal(this.handleanimalRanks, this.chaMod,this.handleanimalBonuses);
+			return skillTotal(this.handleanimalRanks, this.chaMod,this.handleanimalBonuses, this.classSkills.indexOf("handleanimal"));
 		}
 		,healTotal : function() {
-			return skillTotal(this.healRanks, this.wisMod, this.healBonuses);
+			return skillTotal(this.healRanks, this.wisMod, this.healBonuses, this.classSkills.indexOf("heal"));
 		}
 		,intimidateTotal : function() {
-			return skillTotal(this.intimidateRanks, this.chaMod, this.intimidateBonuses);
+			return skillTotal(this.intimidateRanks, this.chaMod, this.intimidateBonuses, this.classSkills.indexOf("intimidate"));
 		}
 		,knowledgearcanaTotal : function() {
-			return skillTotal(this.knowledgearcanaRanks, this.intMod, this.knowledgearcanaBonuses);
+			return skillTotal(this.knowledgearcanaRanks, this.intMod, this.knowledgearcanaBonuses, this.classSkills.indexOf("knowledgearcana"));
 		}
 		,knowledgedungeoneeringTotal : function() {
-			return skillTotal(this.knowledgedungeoneeringRanks, this.intMod, this.knowledgedungeoneeringBonuses);
+			return skillTotal(this.knowledgedungeoneeringRanks, this.intMod, this.knowledgedungeoneeringBonuses, this.classSkills.indexOf("knowledgedungeoneering"));
 		}
 		,knowledgeengineeringTotal : function() {
-			return skillTotal(this.knowledgeengineeringRanks, this.intMod, this.knowledgeengineeringBonuses);
+			return skillTotal(this.knowledgeengineeringRanks, this.intMod, this.knowledgeengineeringBonuses, this.classSkills.indexOf("knowledgeengineering"));
 		}
 		,knowledgegeographyTotal : function() {
-			return skillTotal(this.knowledgegeographyRanks, this.intMod, this.knowledgegeographyBonuses);
+			return skillTotal(this.knowledgegeographyRanks, this.intMod, this.knowledgegeographyBonuses, this.classSkills.indexOf("knowledgegeography"));
 		}
 		,knowledgehistoryTotal : function() {
-			return skillTotal(this.knowledgehistoryRanks, this.intMod, this.knowledgehistoryBonuses);
+			return skillTotal(this.knowledgehistoryRanks, this.intMod, this.knowledgehistoryBonuses, this.classSkills.indexOf("knowledgehistory"));
 		}
 		,knowledgelocalTotal : function() {
-			return skillTotal(this.knowledgelocalRanks, this.intMod, this.knowledgelocalBonuses);
+			return skillTotal(this.knowledgelocalRanks, this.intMod, this.knowledgelocalBonuses, this.classSkills.indexOf("knowledgelocal"));
 		}
 		,knowledgenatureTotal : function() {
-			return skillTotal(this.knowledgenatureRanks, this.intMod, this.knowledgenatureBonuses);
+			return skillTotal(this.knowledgenatureRanks, this.intMod, this.knowledgenatureBonuses, this.classSkills.indexOf("knowledgenature"));
 		}
 		,knowledgenobilityTotal : function() {
-			return skillTotal(this.knowledgenobilityRanks, this.intMod, this.knowledgenobilityBonuses);
+			return skillTotal(this.knowledgenobilityRanks, this.intMod, this.knowledgenobilityBonuses, this.classSkills.indexOf("knowledgenobility"));
 		}
 		,knowledgeplanesTotal : function() {
-			return skillTotal(this.knowledgeplanesRanks, this.intMod, this.knowledgeplanesBonuses);
+			return skillTotal(this.knowledgeplanesRanks, this.intMod, this.knowledgeplanesBonuses, this.classSkills.indexOf("knowledgeplanes"));
 		}
 		,knowledgereligionTotal : function() {
-			return skillTotal(this.knowledgereligionRanks, this.intMod, this.knowledgereligionBonuses);
+			return skillTotal(this.knowledgereligionRanks, this.intMod, this.knowledgereligionBonuses, this.classSkills.indexOf("knowledgereligion"));
 		}
 		,linguisticsTotal : function() {
-			return skillTotal(this.linguisticsRanks, this.intMod, this.linguisticsBonuses);
+			return skillTotal(this.linguisticsRanks, this.intMod, this.linguisticsBonuses, this.classSkills.indexOf("linguistics"));
 		}
 		,perceptionTotal : function() {
-			return skillTotal(this.perceptionRanks, this.wisMod, this.perceptionBonuses);
+			return skillTotal(this.perceptionRanks, this.wisMod, this.perceptionBonuses, this.classSkills.indexOf("perception"));
 		}
 		,rideTotal : function() {
-			return skillTotal(this.rideRanks, this.dexMod, this.rideBonuses);
+			return skillTotal(this.rideRanks, this.dexMod, this.rideBonuses, this.classSkills.indexOf("ride"));
 		}
 		,sensemotiveTotal : function() {
-			return skillTotal(this.sensemotiveRanks, this.wisMod, this.sensemotiveBonuses);
+			return skillTotal(this.sensemotiveRanks, this.wisMod, this.sensemotiveBonuses, this.classSkills.indexOf("sensemotive"));
 		}
 		,sleightofhandTotal : function() {
-			return skillTotal(this.sleightofhandRanks, this.dexMod, this.sleightofhandBonuses);
+			return skillTotal(this.sleightofhandRanks, this.dexMod, this.sleightofhandBonuses, this.classSkills.indexOf("sleightofhand"));
 		}
 		,spellcraftTotal : function() {
-			return skillTotal(this.spellcraftRanks, this.intMod, this.spellcraftBonuses);
+			return skillTotal(this.spellcraftRanks, this.intMod, this.spellcraftBonuses, this.classSkills.indexOf("spellcraft"));
 		}
 		,stealthTotal : function() {
-			return skillTotal(this.stealthRanks, this.dexMod, this.stealthBonuses);
+			return skillTotal(this.stealthRanks, this.dexMod, this.stealthBonuses, this.classSkills.indexOf("stealth"));
 		}
 		,survivalTotal : function() {
-			return skillTotal(this.survivalRanks, this.wisMod, this.survivalBonuses);
+			return skillTotal(this.survivalRanks, this.wisMod, this.survivalBonuses, this.classSkills.indexOf("survival"));
 		}
 		,swimTotal : function() {
-			return skillTotal(this.swimRanks, this.strMod, this.swimBonuses);
+			return skillTotal(this.swimRanks, this.strMod, this.swimBonuses, this.classSkills.indexOf("swim"));
 		}
 		,usemagicdeviceTotal : function() {
-			return skillTotal(this.usemagicdeviceRanks, this.chaMod, this.usemagicdeviceBonuses);
+			return skillTotal(this.usemagicdeviceRanks, this.chaMod, this.usemagicdeviceBonuses, this.classSkills.indexOf("usemagicdevice"));
 		}
 		
 	}
@@ -342,8 +344,12 @@ function getAbilityTotal(base, bonuses) {
 	return total;
 }
 
-function skillTotal(ranks, ability, bonuses){
-	return parseInt(ranks) + parseInt(ability) + bonuses.reduce(function(a,b){return a+b;});
+function skillTotal(ranks, ability, bonuses, isClass){
+	var total = parseInt(ranks) + parseInt(ability) + bonuses.reduce(function(a,b){return a+b;})
+	if(isClass !=-1 && ranks > 0) {
+		total += 3;
+	}
+	return total;
 }
 	
 })();

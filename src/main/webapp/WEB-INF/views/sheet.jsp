@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/general.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/personal.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/core-attributes.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/skills.css">
 	
 	<title>Character Sheet</title>
 </head>
@@ -233,7 +234,7 @@
 </section>
 
 <section class="skills">
-	<h1>Skills</h1>
+	<h1 class="black skills-title">SKILLS</h1>
 	
 	<table>
 		<thead>
@@ -250,7 +251,7 @@
 		<tbody>
 			<c:forEach items="${sheet.skills}" var="skill">
 				<tr>
-					<td><input type="checkbox" value="true" ${skill.ofClass ? 'checked' : '' } ></td>
+					<td><input type="checkbox" value="${skill.keyName}" ${skill.ofClass ? 'checked' : '' } v-model="classSkills" ></td>
 					<td>${skill.name}</td>
 					<td>{{${skill.keyName}Total}}</td>
 					<td>${skill.ability}</td>
